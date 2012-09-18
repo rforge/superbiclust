@@ -1,0 +1,12 @@
+Package: biclustSim
+Type: Package
+Title: generating super biclusters form the set of overlapping outputs
+Version: 0.1
+Date: 2012-08-23
+Author: Tatsiana Khamiakova
+Maintainer: Tatsiana Khamiakova <tatsiana.khamiakova@uhasselt.be>
+Depends: biclust, isa2, fabia
+Imports: methods
+Description: A set of functions for generating the similarity matrix between obtained biclusters for a given dataset. The matrix is used for the construction of hierarchical tree to obtain cut-off points. The result is a number of robust biclusters with non or low overlap.
+License: GPL-3
+LazyLoad: yes
