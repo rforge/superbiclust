@@ -3,11 +3,14 @@
 \alias{superbiclust}
 \docType{package}
 \title{
-generating super biclusters form the set of overlapping outputs
+generating super biclusters form the set of biclusters
 
 }
 \description{
-A set of functions for generating the similarity matrix between obtained biclusters for a given dataset. The matrix is used for the construction of hierarchical tree to obtain cut-off points. The result is a number of robust biclusters with non or low overlap.}
+The package contains a number of functions for computing similarity matrix of the biclusters obtained by a variety of methods, initialization seeds or various parameter settings.
+The matrix is used for the construction of hierarchical tree based on overall similarity, row similarity or column similarity to obtain cut-off points for the similarity metric of choice.
+Various statistics are output per bicluster set: a number of a given gene(compound) or gene (compound) set has been present in any bicluster of output or per run.
+After the tree is cut, th esuper biclusters are obtained in a form of biclust object, which can further be used for plotting of biclusters.}
 \details{
 \tabular{ll}{
 Package: \tab biclustSim\cr
@@ -22,6 +25,6 @@ LazyLoad: \tab yes\cr
 Tatsiana Khamiakova <tatsiana.khamiakova@uhasselt.be>
 }
 \references{
-Shi et al.
+Shi et al. (2010) A bi-ordering approach to linking gene expression	with clinical annotations in gastric cancer. BMC Bioinformatics. 11. pages 477. 
 }
 \keyword{biclustering, similarity}
