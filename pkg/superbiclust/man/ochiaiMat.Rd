@@ -6,7 +6,7 @@ Ochiai similarity Matrix for bicluster output
 \description{
 Computes Ochiai similarity matrix for biclusters in two bicluster sets}
 \usage{
-ochiaiMat(x, y)
+ochiaiMat(x, y, type=c("rows", "cols", "both"))
 }
 
 \arguments{
@@ -15,10 +15,16 @@ BiclustSet object containing row and column indicators of bicluster membership, 
 }
  \item{y}{
 BiclustSet object containing row and column indicators of bicluster membership, number of biclusters
-}}
+}
+  \item{type}{
+whether to compute Ochiai index in two dimensions, row dimension or column dimension 
+}
+}
 \details{
 This function operates on BiclustSet objects and computes pairwise similarity based on the common elements between biclusters. 
-Give more detail on ochiaiMat similarity score}
+The Ochiai similarity score \eqn{ja} for two biclusters A and B is computed as 
+		\deqn{oc=\frac{|A\cap B|}{\sqrt{|A| |B|}}}
+}
 \value{
 matrix of pairwise Ochiai indices
 }

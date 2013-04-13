@@ -6,7 +6,7 @@ Kulczynski similarity Matrix for bicluster output
 \description{
 computes Kulczynski similarity matrix for biclusters in two bicluster sets}
 \usage{
-kulczynskiMat(x, y)
+kulczynskiMat(x, y, type=c("rows", "cols", "both"))
 }
 
 \arguments{
@@ -15,10 +15,16 @@ BiclustSet object containing row and column indicators of bicluster membership, 
 }
  \item{y}{
 BiclustSet object containing row and column indicators of bicluster membership, number of biclusters
-}}
+}
+ \item{type}{
+whether to compute Kulczynski index in two dimensions, row dimension or column dimension 
+}
+}
 \details{
 This function operates on BiclustSet objects and computes pairwise similarity based on the common elements between biclusters. 
-Give more detail on kulczynskiMat similarity score}
+Kulczynski similarity score \eqn{ku} for two biclusters A and B is computed as 
+		\deqn{ku = 2|A\cap B|\left(\frac{1}{|A|} + \frac{1}{|B|}\right)}
+}
 \value{
 matrix of pairwise Kulczynski indices
 }

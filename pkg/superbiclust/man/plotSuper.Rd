@@ -23,10 +23,15 @@ plotSuper(x, data, BiclustSet)
 }
 
 \details{
-This function plots gene profiles within a robust bicluster 
+This function constructs a robust bicluster from a set of biclusters identified in a hierarchical tree and
+plots gene profiles for columns in a robust bicluster. Each line represents a gene from a bicluster. 
+The bicluster is saved as \code{Biclust} object which can be further plotetd by available functions from \code{biclust package}.
+The information about the number of biclusters used to generate the resulting robust bicluster is saved in \code{Call} slot of the object.
+This information is important to see how often the bicluster has been discovered under different parameter settings (e.g. initialization seeds) 
+Indices used as an input can be obtained by identify function or by cutting the tree.
 }
 \value{
-biclust object
+biclust object containing bicluster and the information about bicluster subset used to generate it
 }
 \author{
 Tatsiana Khamiakova

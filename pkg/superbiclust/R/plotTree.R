@@ -6,11 +6,13 @@ plotSuper <- function(x, data, BiclustSet){
 	iGroupRows <- BiclustSet@GenesMembership[, x] 
 	superBiclusterSamples <-  as.logical(colSums(iGroupColumns) == nrow(iGroupColumns))
 	superBiclusterGenes  <- as.logical(rowSums(iGroupRows) == ncol(iGroupRows))
-	x11()
+	
 	plotProfilesWithinBicluster(x = data[superBiclusterGenes, superBiclusterSamples], 
 			sampleNames = colnames(data)[superBiclusterSamples], 
 			main = "gene profiles")
-	return(new("biclust", Number=1, NumberxRows=matrix(superBiclusterGenes, ncol=1), NumberxCols=matrix(superBiclusterSamples, nrow=1)))
+	return(new("Biclust", Number=1, RowxNumber=matrix(superBiclusterGenes, ncol=1), NumberxCol=matrix(superBiclusterSamples, nrow=1),
+					info = list(Call="super bicluster",size = length(x)),
+					Parameters = list(Call=paste("Obtained from ",length(x),"biclusters" )) ))
 }
 
 plotSuperAll <- function(x, data, BiclustSet){
@@ -21,8 +23,7 @@ plotSuperAll <- function(x, data, BiclustSet){
 	iGroupRows <- BiclustSet@GenesMembership[, x] 
 	superBiclusterSamples <-  as.logical(colSums(iGroupColumns) == nrow(iGroupColumns))
 	superBiclusterGenes  <- as.logical(rowSums(iGroupRows) == ncol(iGroupRows))
-	
-	x11()
+
 	plotProfilesAcrossAllSamples(x = data,superBiclusterGenes, superBiclusterSamples)
 }
 
@@ -67,5 +68,3 @@ plotProfilesWithinBicluster <- function(x, main = "", sampleNames, geneNames = N
 	} else matlines(y=t(x), type = "l", lty=rep(1,5000) , col=rep(1,5000),lwd = 1, pch = rep(1,5000))
 	
 }
-
-
