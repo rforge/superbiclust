@@ -41,7 +41,7 @@ setMethod("BiclustSet",signature("list"),
 			myBiclustSet = new("BiclustSet",GenesMembership=bicArows, ColumnMembership=bicAcols, 
 					Number=biclust1Number)
 		})
-###**show and summary teh same as for Biclust class******************************
+###**show and summary the same as for Biclust class******************************
 
 setMethod("show", "BiclustSet",
 		function(object)
