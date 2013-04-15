@@ -1,7 +1,9 @@
 \name{BiclustSet-class}
 \docType{class}
+\alias{BiclustSet}
 \alias{BiclustSet-class}
-
+\alias{show,BiclustSet-method}
+\alias{summary,BiclustSet-method}
 \title{Class \code{BiclustSet}}
 \description{
 BiclustSet Class contains the biclustering result in a form: bicluster rows and bicluster columns
