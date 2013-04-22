@@ -1,5 +1,5 @@
 import(methods, Matrix)
-import(biclust,fabia,isa2)
+import(biclust,fabia)
 
 export(similarity)
 exportClasses(BiclustSet)

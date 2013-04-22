@@ -1,12 +1,12 @@
 Package: superbiclust
 Type: Package
-Title: generating super biclusters form the set of overlapping outputs
+Title: generating robust biclusters form the set of overlapping outputs
 Version: 0.1
 Date: 2012-08-23
 Author: Tatsiana Khamiakova
 Maintainer: Tatsiana Khamiakova <tatsiana.khamiakova@uhasselt.be>
-Depends: biclust, isa2, fabia
+Depends: biclust, fabia
 Imports: methods, Matrix
-Description: A set of functions for generating the similarity matrix between obtained biclusters for a given dataset. The matrix is used for the construction of hierarchical tree to obtain cut-off points. The result is a number of robust biclusters with non or low overlap.
-License: GPL-3
+Description: Package contains functions for generating robust biclusters for a given bicluster solution in data. The solution is evaluated based on the similarity of its biclusters, and afterwards the hierarchical tree is constructed to obtain cut-off points for the classes of biclusters. The result is a number of robust biclusters with non or low overlap. Biclusters are submatrices in the data which satisfy certain conditions of homogeneity. For more details on biclusters and biclustering see Madeira and Oliveira (2004).
+License: GPL>=2
 LazyLoad: yes
