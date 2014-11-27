@@ -3,17 +3,17 @@ setClass("BiclustSet",
 				Number="numeric")
 )
 #constructor for the class BiclustSet
-BiclustSet <-function(x){myBiclustSet = new("BiclustSet",GenesMembership=x@RowxNumber, ColumnMembership=x@NumberxCol, 
+BiclustSet <-function(x,fabia.thresZ=0.5,fabia.thresL=NULL){myBiclustSet = new("BiclustSet",GenesMembership=x@RowxNumber, ColumnMembership=x@NumberxCol, 
 			Number=x@Number)}
 		
 setGeneric("BiclustSet")
 setMethod("BiclustSet",signature(x="Biclust"),
 		function(x){myBiclustSet = new("BiclustSet",GenesMembership=x@RowxNumber, ColumnMembership=x@NumberxCol, 
 				Number=x@Number)})
-setMethod("BiclustSet",signature("Factorization"),function(x){
-	require(fabia)
+setMethod("BiclustSet",signature("Factorization"),function(x,fabia.thresZ=0.5,fabia.thresL=NULL){
+	#require(fabia)
 	N <-  x@p1
-	tmp <- extractBic(x)
+	tmp <- extractBic(x,thresZ=fabia.thresZ,thresL=fabia.thresL)
 	X <- x@X
 	FabiaBicl <- tmp$numn
 	DataFabiaColB <- c()
