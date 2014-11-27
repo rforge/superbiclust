@@ -2,7 +2,7 @@ Package: superbiclust
 Type: Package
 Title: Generating Robust Biclusters from a Bicluster Set (Ensemble
         Biclustering)
-Version: 0.2
+Version: 1.1
 Date: 2012-08-23
 Author: Tatsiana Khamiakova
 Maintainer: Tatsiana Khamiakova <tatsiana.khamiakova@uhasselt.be>
